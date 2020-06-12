@@ -22,7 +22,7 @@ public class ShootBall : MonoBehaviour
             Vector3 ballPosition = new Vector3(
             	this.gameObject.transform.position.x, 
             	this.gameObject.transform.position.y + 0.5f, 
-            	this.gameObject.transform.position.z
+            	this.gameObject.transform.position.z + 0.3f
             ) + transform.rotation * Vector3.forward;
             
             GameObject obj = Instantiate(ball, ballPosition, this.gameObject.transform.rotation) as GameObject;
@@ -33,4 +33,6 @@ public class ShootBall : MonoBehaviour
             Destroy(obj, 5);
         }
     }
+
+
 }
